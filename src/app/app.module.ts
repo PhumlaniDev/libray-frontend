@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './core/components/login/login.component';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './core/components/register/register.component';
 
 @NgModule({
@@ -15,7 +16,7 @@ import { RegisterComponent } from './core/components/register/register.component
     RegisterComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
