@@ -18,6 +18,15 @@ const routes: Routes = [
   {
     path: 'books',
     component: HomeComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/books',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: HomeComponent,
     canActivate: [AuthGuard],
   },
 ];

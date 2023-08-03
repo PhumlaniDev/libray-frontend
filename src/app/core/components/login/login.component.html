@@ -1,15 +1,17 @@
-<div class="container-sm">
-    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" formControlName="email" placeholder="name@example.com">
+<div class="wrap d-flex align-items-center justify-content-center">
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="d-flex flex-column w-50">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" formControlName="email"
+                placeholder="name@example.com">
+            <label for="form-floating" class="form-label">Email address</label>
             <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
                 Please enter a valid email address.
             </div>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" formControlName="password">
+        <div class="form-floating  mb-3">
+            <input type="password" class="form-control" id="floatingPassword" formControlName="password"
+                placeholder="Password">
+            <label for="floatingPassword">Password</label>
             <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
                 Password is required.
             </div>

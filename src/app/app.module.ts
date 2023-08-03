@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './core/components/register/register.component';
+import { BookFormModalComponent } from './core/components/book-form-modal/book-form-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RegisterComponent } from './core/components/register/register.component
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    BookFormModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

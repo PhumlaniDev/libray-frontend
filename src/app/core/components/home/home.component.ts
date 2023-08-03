@@ -4,6 +4,7 @@ import { Observable, map } from 'rxjs';
 import { Book } from '../../interface/books';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HomeService } from '../../services/home.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private homeService: HomeService,
-    private sanitizer: DomSanitizer
+    private modalService: NgbModal
   ) {
     this.books = new Observable<Book[]>();
   }
@@ -26,5 +27,9 @@ export class HomeComponent implements OnInit {
 
   getBooks(): void {
     this.books = this.homeService.getBooks();
+  }
+
+  saveBook(book: Book): void {
+    this.saveBook(book);
   }
 }
