@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<!-- <table class="table table-striped">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -26,4 +26,12 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<div class="conatiner">
+    <div class="cards">
+        <app-card *ngFor="let book of books | async;" [coverImage]="book.coverImage" [title]="book.title"
+            [description]="book.description" [author]="book.author">
+        </app-card>
+    </div>
+</div>
