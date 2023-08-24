@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './core/components/register/register.component';
 import { CategoryComponent } from './core/components/category/category.component';
+import { AdminComponent } from './core/components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CategoryComponent } from './core/components/category/category.component
     CardComponent,
     HeroComponent,
     CategoryComponent,
+    AdminComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [],
