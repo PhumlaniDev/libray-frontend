@@ -34,6 +34,12 @@ export class HomeClient {
     return this.http.get<Book[]>(`${environment.apiUrl}/books`);
   }
 
+  searchBooks(query: string): Observable<Book[]> {
+    return this.http.get<Book[]>(
+      `${environment.apiUrl}/search?query=${encodeURIComponent(query)}}`
+    );
+  }
+
   saveBook(book: Book): Observable<Book> {
     return this.http.post<Book>(`${environment.apiUrl}/books`, book);
   }

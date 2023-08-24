@@ -1,35 +1,7 @@
-<!-- <table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Description</th>
-            <th scope="col">Cover Image</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let book of books | async; index as i">
-            <td>{{ i + 1 }}</td>
-            <td>{{ book.title }}</td>
-            <td>{{ book.author }}</td>
-            <td>{{ book.description }}</td>
-            <td>
-                <img [src]="book.coverImage" alt="{{ book.title }} Cover" style="width: 100px;" />
-            </td>
-            <td>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">Add</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table> -->
+<app-hero></app-hero>
 
-<div class="conatiner">
-    <div class="cards">
+<div class="wrapper">
+    <div class="grid">
         <app-card *ngFor="let book of books | async;" [coverImage]="book.coverImage" [title]="book.title"
             [description]="book.description" [author]="book.author">
         </app-card>

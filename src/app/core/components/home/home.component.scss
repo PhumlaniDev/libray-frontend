@@ -1,5 +1,26 @@
-.cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+// .cards {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+//     gap: 5%;
+// }
+
+// .categories {
+//     border: solid blue 2px;
+//     width: 600px;
+// }
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

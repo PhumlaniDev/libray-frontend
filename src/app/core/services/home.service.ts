@@ -43,6 +43,10 @@ export class HomeService implements CanActivate {
     return this.homeClient.getBooks();
   }
 
+  searchBooks(query: string): Observable<Book[]> {
+    return this.homeClient.searchBooks(query);
+  }
+
   saveBook(book: Book): Observable<Book> {
     return this.homeClient.saveBook(book);
   }
