@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-3 mb-3 mb-sm-0" *ngFor="let item of data">
+    <div class="card text-bg-primary" style="max-width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ item.name }}
+        </h5>
+        <p class="card-text">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
